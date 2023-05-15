@@ -19,15 +19,11 @@ function deleteComment(req, res) {
 
 async function create(req, res) {
   const sneaker = await Sneaker.findById(req.params.id);
-
   req.body.user = req.user._id;
   req.body.userName = req.user.name;
   req.body.userAvatar = req.user.avatar;
-
-  // We can push (or unshift) subdocs into Mongoose arrays
   sneaker.comments.push(req.body);
   try {
-    // Save any changes made to the movie doc
     await sneaker.save();
   } catch (err) {
     console.log(err);

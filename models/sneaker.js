@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-// optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
@@ -31,7 +30,7 @@ const sneakerSchema = new Schema({
     default: function() {
       return new Date().getFullYear();
     },
-    min: 1927
+    min: 1980
   },
   mpaaRating: {
     type: String,
@@ -47,5 +46,4 @@ const sneakerSchema = new Schema({
   timestamps: true
 });
 
-// Compile the schema into a model and export it
 module.exports = mongoose.model('Sneaker', sneakerSchema);

@@ -1,0 +1,67 @@
+<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Chewy|Creepster|Fredoka+One|Luckiest+Guy|Quattrocento+Sans|Racing+Sans+One&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <title>Sole Stash</title>
+      <meta name="viewport" content="width=device-width">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+  <body>
+
+<div class='row'>
+  <div class='form-cards'>
+    <div class="create-sneaker-table" style="width: 18rem;">
+      <div class="create-body">
+          <h5 class="card-title">Create Sneaker</h5>
+          <form class="create-form">
+          <h6>Name</h6>
+          <input id="create-sneaker-name" type="text" name="name" placeholder='Sneaker name'>
+          <h6>Sneaker Color</h6>
+          <input id="create-sneaker-color" type="text" name="color" placeholder='Color'>
+          <h6>Release Date</h6>
+          <input id="create-sneaker-date" type="text" name="release-date" placeholder='MM/DD/YYYY'>
+          <button class="btn-success">Create Sneaker</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="update-sneaker-table" style="width: 18rem;">
+      <div class="update-body">
+        <h5 class="update-title">Update Sneaker</h5>
+        <form class="update-form">
+          <h6>Name</h6>
+          <input id="update-sneaker-name" type="name" name="name" placeholder='Sneaker name'>
+          <h6>Sneaker Color</h6>
+          <input id="update-sneaker-color" type="sneaker-color" name="color" placeholder='Color'>
+          <h6>Release Date</h6>
+          <input id="update-sneaker-date" type="release_date" name="release_date" placeholder='MM/DD/YYYY'>
+          <button class="btn-warning">Update Sneaker</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="delete-show-table" style="width: 18rem;">
+      <div class="delete-show-body">
+        <h5 class="delete-show-title">Show or Delete Sneaker</h5>
+        <form class="delete-show-form">
+          <h6>Sneaker ID</h6>
+          <input id='delete-show-input' required type="number" name="id" placeholder='Sneaker ID'>
+          <button id='show-button' class="btn-success">Show Sneaker</button>
+          <button id='delete-button' class="btn-danger">Delete Sneaker</button>
+        </form>
+      </div>
+      <div id='delete-show-display'>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<%- include('../partials/footer') %>

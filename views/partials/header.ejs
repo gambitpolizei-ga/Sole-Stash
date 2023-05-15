@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Sole Stash</title>
 </head>
 <body>
+  <h1>Sole Stash</h1>
+  <a href="/">Home</a>
+  <a href="/sneakers">All Sneakers | <a href="/sneakers/new">Add Sneaker</a>
     <nav>
-        <img>👟</img>
+        <img><strong>👟</strong></img>
         <a href="/sneakers" <%- title === 'Collection' ? 'class="active"' : '' %>>COLLECTION</a>
         <% if (user) { %>
           <a href="/performers/new"	<%- title === 'Add Performer' ? 'class="active"' : '' %>>

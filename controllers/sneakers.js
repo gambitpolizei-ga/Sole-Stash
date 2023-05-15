@@ -25,8 +25,6 @@ async function show(req, res) {
 }
 
 function newSneaker(req, res) {
-  // We'll want to be able to render an  
-  // errorMsg if the create action fails
   res.render('sneakers/new', { title: 'Add Sneaker', errorMsg: '' });
 }
 
