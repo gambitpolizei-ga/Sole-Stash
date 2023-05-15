@@ -1,7 +1,7 @@
 require('dotenv').config();
 require('./config/database');
 
-const Sneaker = require('./models/sneaker');
+const Collection = require('./models/collection');
 
-let sneakers = await Sneaker.find({});
-console.log(sneakers);
+let collections = await Collection.find({});
+console.log(collections);

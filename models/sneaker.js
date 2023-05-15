@@ -24,17 +24,23 @@ const commentSchema = new Schema({
 });
 
 const sneakerSchema = new Schema({
-  title: { type: String, required: true },
-  releaseYear: {
+  name: { type: String, required: true },
+  brand: {
+    type: String,
+    enum: ['Air Jordan', 'Nike', 'Adidas', 'Luxury', 'Other'],
+  },
+  releaseDate: {
     type: Number,
     default: function() {
       return new Date().getFullYear();
     },
     min: 1980
   },
-  mpaaRating: {
-    type: String,
-    enum: ['G', 'PG', 'PG-13', 'R']
+  size: {
+    type: Number,
+    min: 4,
+    max: 17,
+    default: 10
   },
   cast: [{
     type: Schema.Types.ObjectId,

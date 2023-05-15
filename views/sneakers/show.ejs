@@ -1,12 +1,14 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Title: </div>
-  <div><%= sneaker.title %></div>
-  <div>Release Year: </div>
-  <div><%= sneaker.releaseYear %></div>
-  <div>Rating: </div>
-  <div><%= sneaker.mpaaRating %></div>
+  <div>Name: </div>
+  <div><%= collection.title %></div>
+  <div>Brand: </div>
+  <div><%= sneaker.brand %></div>
+  <div>Release Date: </div>
+  <div><%= sneaker.releaseDate %></div>
+  <div>Size: </div>
+  <div><%= sneaker.size %></div>
   <div>Now Showing: </div>
   <div><%= sneaker.nowShowing ? 'Yes' : 'Nope' %></div>
   <!-- start cast list -->
@@ -19,7 +21,7 @@
   <!-- end cast list -->
 </section>
 <!-- add to cast form below this comment -->
-<form id="add-per-to-cast" action="/sneaker/<%= sneaker._id %>/performers" method="POST">
+<form id="add-per-to-cast" action="/sneaeker/<%= sneakers._id %>/performers" method="POST">
   <select name="performerId">
     <!-- Emit an option for each performer -->
     <%- performers.map(p => 

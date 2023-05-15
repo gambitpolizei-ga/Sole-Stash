@@ -1,20 +1,31 @@
 <%- include('../partials/header') %>
 
+<h2>Enter a New Sneaker</h2>
 <form id="new-form" action="/sneakers" method="POST">
-  <label>Title:</label>
+  <label>Name:
   <input type="text" name="title">
-  <label>Release Year:</label>
-  <input type="text" name="releaseYear">
-  <label>MPAA Rating</label>
-  <select name="mpaaRating">
-    <option value="G">G</option>
-    <option value="PG">PG</option>
-    <option value="PG-13">PG-13</option>
-    <option value="R">R</option>
-  </select>
-  <label>Now Showing:</label>
+  </label><br>
+  <label>Brand:
+    <select name="brand">
+      <option value="Air Jordan">Air Jordan</option>
+      <option value="Nike">Nike</option>
+      <option value="Adidas">Adidas</option>
+      <option value="Luxury">Luxury</option>
+      <option value="Other">Other</option>
+    </select>
+  </label><br>
+  <label>Release Date:
+    <input id="create-sneaker-date" type="text" name="release-date" placeholder='MM/DD/YYYY'>
+  </label><br>
+  <label>Size:
+    <select name="size">
+      <input type="number" name="size">
+    </select>
+  </label><br>
+  <label>Now Showing:
   <input type="checkbox" name="nowShowing" checked>
   <input type="submit" value="Add Sneaker">
+  </label><br>
 </form>
 
 <%- include('../partials/footer') %>
