@@ -33,7 +33,7 @@ const sneakerSchema = new Schema({
   dateAcquired: {
     type: Date,
     default: function() {
-      return new Date(new Date().setFullYear(new Date ().getFullYear() + 1));
+      return new Date(new Date().setFullYear(new Date ().getFullYear()));
     }
   },
   size: {

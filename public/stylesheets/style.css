@@ -47,7 +47,6 @@ nav {
 
 body > nav {
   grid-area: nav;
-  background-color: rgb(97, 201, 247);
   display: flex;
   justify-content: flex-end;
   flex-basis: auto;
@@ -82,7 +81,7 @@ nav > a:hover:not(.active) {
 }
 
 nav > a.active {
-  color: rgb(226, 78, 169);
+  color: rgb(52, 23, 165);
   cursor: default;
 }
 
@@ -211,8 +210,8 @@ hr {
 }
 
 .comment-user img {
-  border-radius: 50%;
-  height: 40px;
+  height: 75px;
+  width: 75px;
 }
 
 nav ul {
