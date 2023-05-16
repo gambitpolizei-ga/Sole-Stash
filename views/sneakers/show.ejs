@@ -1,5 +1,6 @@
 <%- include('../partials/header') %>
-
+<h2>SNEAKERS</h2>
+<div class="sneaker-table" style="width: 18rem;">
 <section id="show-page">
   <div>Name: </div>
   <div><%= sneaker.title %></div>
@@ -10,11 +11,12 @@
   <div>Size: </div>
   <div><%= sneaker.size %></div>
 </section>
-<br>
 <form id="new-form" action='/sneakers/<%= sneaker._id %>?_method=DELETE' method="POST">
-  <button type="submit">Delete</button>
+  <button type="submit">DELETE SNEAKER</button>
 </form>
-<h2>Comments</h2>
+</div>
+<h2>ADD COMMENT</h2>
+<div class="comment-form" style="width: 18rem;">
 <form id="add-comment-form" method="POST" action="/sneakers/<%= sneaker._id %>/comments">
   <label>Comment:</label>
   <textarea name="content"></textarea>
@@ -26,9 +28,11 @@
     <option value="4">4</option>
     <option value="5" selected>5</option>
   </select>
-  <input type="submit" value="Add Comment">
+  <input type="submit" value="ADD COMMENT">
+</div>
 </form>
-
+<h2>COMMENTS</h2>
+<div class="comment-table" style="width: 61rem;">
 <% if (sneaker.comments.length) { %>
 <table>
     <thead>
@@ -37,7 +41,7 @@
         <th>Date</th>
         <th>Comment</th>
         <th>Rating</th>
-        <th></th>
+        <th>Delete?</th>
       </tr>
     </thead>
     <tbody>
@@ -67,5 +71,6 @@
 <% } else { %>
   <h5>No Comments Yet</h5>
 <% } %>
+</div>
     
 <%- include('../partials/footer') %>

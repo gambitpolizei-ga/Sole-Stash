@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 
 <h2>ENTER A NEW SNEAKER</h2>
+<div class="new-sneaker" style="width: 18rem;">
 <form id="new-form" action="/sneakers" method="POST">
   <label>NAME:
   <input type="text" name="title">
@@ -20,8 +21,8 @@
   <label>SIZE:
       <input type="number" name="size">
       <input type="submit" value="ADD SNEAKER">
-  </label><br>
-
+  </label>
+</div>
 </form>
 
 <%- include('../partials/footer') %>

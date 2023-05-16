@@ -20,7 +20,7 @@ body {
   margin: 21px;
   width: 100vw;
   height: 100vh;
-  margin-top: 4vmin;
+  margin-top: 2vmin;
   display: grid;
   background-image: url("/images/sole-stash-bg.jpg");
   background-repeat: no-repeat;
@@ -38,7 +38,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	padding: 20px;
-	background-color: #000;
+  overflow: hidden;
 }
 
 nav {
@@ -59,7 +59,6 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: black;
   padding: 10px;
   overflow-y: scroll;
 }
@@ -102,7 +101,7 @@ nav > a.active {
 #new-form input[type="submit"] {
   grid-column: span 2;
   width: 10rem;
-  margin-left: auto;
+  margin: center;
 }
 
 table {
@@ -166,7 +165,6 @@ hr {
 #badge-container {
   display: flex;
   flex-wrap: wrap;
-  /* padding: 1rem; */
   width: 80%;
   border: 2px solid #B8C0C2;
   border-radius: .5rem;
@@ -196,7 +194,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20px;
+  height: 40px;
 }
 
 .login img {
@@ -269,4 +267,40 @@ li img {
 h3 {
 	font-size: 24px;
 	font-weight: bold;
+}
+
+.collection-table {
+  margin-top: 40px;
+  border-width: 11px;
+  border-style: outset;
+  box-sizing: border-box;
+}
+
+.comment-form {
+  margin-top: 40px;
+  border-width: 11px;
+  border-style: outset;
+  box-sizing: border-box;
+}
+
+.comment-table {
+  margin-top: 40px;
+  border-width: 11px;
+  border-style: outset;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.sneaker-table {
+  margin-top: 40px;
+  border-width: 11px;
+  border-style: outset;
+  box-sizing: border-box;
+}
+
+.new-sneaker {
+  margin-top: 40px;
+  border-width: 11px;
+  border-style: outset;
+  box-sizing: border-box;
 }
