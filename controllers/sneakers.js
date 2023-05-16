@@ -5,7 +5,8 @@ module.exports = {
   index,
   show,
   new: newSneaker,
-  create
+  create,
+  delete: deleteSneaker
 };
 
 async function index(req, res) {
@@ -33,4 +34,9 @@ async function create(req, res) {
     console.log(err);
     res.render('sneakers/new', { errorMsg: err.message });
   }
+}
+
+async function deleteSneaker(req,res) {
+  await Sneaker.findByIdAndDelete(req.params.id);
+  res.redirect('/sneakers');
 }

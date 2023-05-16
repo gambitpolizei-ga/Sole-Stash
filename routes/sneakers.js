@@ -7,5 +7,6 @@ router.get('/', sneakersCtrl.index);
 router.get('/new', ensureLoggedIn, sneakersCtrl.new);
 router.get('/:id', sneakersCtrl.show);
 router.post('/', ensureLoggedIn, sneakersCtrl.create);
+router.delete('/:id', sneakersCtrl.delete);
 	
 module.exports = router;

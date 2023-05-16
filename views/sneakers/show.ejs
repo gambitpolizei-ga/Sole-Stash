@@ -11,6 +11,9 @@
   <div><%= sneaker.size %></div>
 </section>
 <br>
+<form id="new-form" action='/sneakers/<%= sneaker._id %>?_method=DELETE' method="POST">
+  <button type="submit">Delete</button>
+</form>
 <h2>Comments</h2>
 <form id="add-comment-form" method="POST" action="/sneakers/<%= sneaker._id %>/comments">
   <label>Comment:</label>
@@ -54,7 +57,7 @@
             <% } %>
           </td>
         </tr>
-      <% }); %>
+      <% }) %>
       <tr>
         <td colspan="3"></td>
         <td><strong><%= (total / sneaker.comments.length).toFixed(1) %></strong></td>
