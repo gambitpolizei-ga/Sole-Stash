@@ -18,15 +18,16 @@ function deleteComment(req, res) {
 }
 
 async function create(req, res) {
+  try {
   const sneaker = await Sneaker.findById(req.params.id);
   req.body.user = req.user._id;
   req.body.userName = req.user.name;
   req.body.userAvatar = req.user.avatar;
+  console.log(req.body);
   sneaker.comments.push(req.body);
-  try {
     await sneaker.save();
   } catch (err) {
     console.log(err);
   }
-  res.redirect(`/sneakers/${sneaker._id}`);
+  res.redirect(`/sneakers/${req.params.id}`);
 }

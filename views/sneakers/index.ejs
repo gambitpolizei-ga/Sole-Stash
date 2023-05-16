@@ -1,20 +1,43 @@
 <%- include('../partials/header') %>
-<!DOCTYPE html>
-<html>
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-      <img id='title-image' src="./public/images/sole-stash-logo.png" height='500px' width='500px'>
-      <title>Sole Stash</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-  <body>
-    
+<body>
+  <img id='title-image' src="./public/images/sole-stash-logo.png" height='500px' width='500px'>
+    <h2>Collection</h2>
+    <section id="collection">
+			<h2>My Collection</h2>
+			<ul>
+				<li>
+					<img src="https://via.placeholder.com/150x150" alt="Sneaker">
+					<h3>Nike Air Max 90</h3>
+					<p>Size: 10</p>
+					<p>Color: White/Black</p>
+					<p>Year: 1990</p>
+				</li>
+				<li>
+					<img src="https://via.placeholder.com/150x150" alt="Sneaker">
+					<h3>Adidas Superstar</h3>
+					<p>Size: 9.5</p>
+					<p>Color: White/Green</p>
+					<p>Year: 1983</p>
+				</li>
+			</ul>
+		</section>
+      <table id="list">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Release Date</th>
+          </tr>
+        </thead>
+      <tbody>
+          <% sneakers.forEach(function(s) { %>
+          <tr>
+            <td><%= s.title %></td>
+            <td><%= s.releaseDate %></td>
+            <td><a href="/sneakers/<%= s._id %>">DETAILS</a></td>
+          </tr>
+          <% }) %>
+      </tbody>
+    </table>
 </body>
-</html>
+
 <%- include('../partials/footer') %>

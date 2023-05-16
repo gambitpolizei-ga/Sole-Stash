@@ -1,5 +1,5 @@
 const Sneaker = require('../models/sneaker');
-// const Performer = require('../models/performer');
+const Brand = require('../models/brand');
 
 module.exports = {
   index,
@@ -14,14 +14,9 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-  // Populate the cast array with performer docs instead of ObjectIds
   const sneaker = await Sneaker.findById(req.params.id).populate('cast');
-  // Mongoose query builder approach to retrieve performers not the movie:
-    // Performer.find({}).where('_id').nin(movie.cast)
-  // The native MongoDB approach uses a query object to find 
-  // performer docs whose _ids are not in the movie.cast array like this:
-  const performers = await Performer.find({ _id: { $nin: sneaker.cast } }).sort('name');
-  res.render('sneakers/show', { title: 'Sneaker Detail', sneaker, performers });
+  const brands = await Brand.find({ _id: { $nin: sneaker.cast } }).sort('name');
+  res.render('sneakers/show', { title: 'Sneaker Details', sneaker, brands });
 }
 
 function newSneaker(req, res) {
@@ -29,19 +24,12 @@ function newSneaker(req, res) {
 }
 
 async function create(req, res) {
-  // convert nowShowing's checkbox of nothing or "on" to boolean
-  req.body.nowShowing = !!req.body.nowShowing;
-  // Remove empty properties so that defaults will be applied
-  for (let key in req.body) {
-    if (req.body[key] === '') delete req.body[key];
-  }
+  console.log(req.body)
   try {
-    // Update this line because now we need the _id of the new movie
     const sneaker = await Sneaker.create(req.body);
-    // Redirect to the new movie's show functionality 
+    console.log(sneaker);
     res.redirect(`/sneakers/${sneaker._id}`);
   } catch (err) {
-    // Typically some sort of validation error
     console.log(err);
     res.render('sneakers/new', { errorMsg: err.message });
   }

@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-<h2>Enter a New Sneaker</h2>
+<h2>Enter A New Sneaker</h2>
 <form id="new-form" action="/sneakers" method="POST">
   <label>Name:
   <input type="text" name="title">
@@ -15,17 +15,19 @@
     </select>
   </label><br>
   <label>Release Date:
-    <input id="create-sneaker-date" type="text" name="release-date" placeholder='MM/DD/YYYY'>
+    <input type="datetime-local">
+    <button type="submit">Add Date</button>
   </label><br>
   <label>Size:
-    <select name="size">
       <input type="number" name="size">
+
+<label>
+
+  <input type="submit" value="Add Sneaker">
+</label>
     </select>
   </label><br>
-  <label>Now Showing:
-  <input type="checkbox" name="nowShowing" checked>
-  <input type="submit" value="Add Sneaker">
-  </label><br>
+
 </form>
 
 <%- include('../partials/footer') %>

@@ -2,38 +2,17 @@
 
 <section id="show-page">
   <div>Name: </div>
-  <div><%= collection.title %></div>
+  <div><%= sneaker.title %></div>
   <div>Brand: </div>
   <div><%= sneaker.brand %></div>
   <div>Release Date: </div>
   <div><%= sneaker.releaseDate %></div>
   <div>Size: </div>
   <div><%= sneaker.size %></div>
-  <div>Now Showing: </div>
-  <div><%= sneaker.nowShowing ? 'Yes' : 'Nope' %></div>
-  <!-- start cast list -->
-  <div>Cast:</div>
-  <ul>
-    <%- sneaker.cast.map(p => 
-      `<li>${p.name} <small>${p.born.toLocaleDateString()}</small></li>`
-    ).join('') %>
-  </ul>
-  <!-- end cast list -->
 </section>
-<!-- add to cast form below this comment -->
-<form id="add-per-to-cast" action="/sneaeker/<%= sneakers._id %>/performers" method="POST">
-  <select name="performerId">
-    <!-- Emit an option for each performer -->
-    <%- performers.map(p => 
-      `<option value="${p._id}">${p.name}</option>`
-    ).join('') %>
-  </select>
-  <button type="submit">Add to Cast</button>
-</form>
-
-<br><br><h2>Comments</h2>
-<form id="add-comment-form" method="POST"
-  action="/sneakers/<%= sneaker._id %>/comments">
+<br>
+<h2>Comments</h2>
+<form id="add-comment-form" method="POST" action="/sneakers/<%= sneaker._id %>/comments">
   <label>Comment:</label>
   <textarea name="content"></textarea>
   <label>Rating:</label>
