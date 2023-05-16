@@ -1,11 +1,11 @@
 <%- include('../partials/header') %>
 
-<h2>Enter A New Sneaker</h2>
+<h2>ENTER A NEW SNEAKER</h2>
 <form id="new-form" action="/sneakers" method="POST">
-  <label>Name:
+  <label>NAME:
   <input type="text" name="title">
   </label><br>
-  <label>Brand:
+  <label>BRAND:
     <select name="brand">
       <option value="Air Jordan">Air Jordan</option>
       <option value="Nike">Nike</option>
@@ -14,13 +14,12 @@
       <option value="Other">Other</option>
     </select>
   </label><br>
-  <label>Release Date:
+  <label>DATE ACQUIRED:
     <input type="datetime-local">
-    <button type="submit">Add Date</button>
   </label><br>
-  <label>Size:
+  <label>SIZE:
       <input type="number" name="size">
-      <input type="submit" value="Add Sneaker">
+      <input type="submit" value="ADD SNEAKER">
   </label><br>
 
 </form>

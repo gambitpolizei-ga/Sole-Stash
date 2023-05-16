@@ -21,7 +21,7 @@ async function show(req, res) {
 }
 
 function newSneaker(req, res) {
-  res.render('sneakers/new', { title: 'Add Sneaker', errorMsg: '' });
+  res.render('sneakers/new', { title: 'ADD SNEAKER', errorMsg: '' });
 }
 
 async function create(req, res) {
