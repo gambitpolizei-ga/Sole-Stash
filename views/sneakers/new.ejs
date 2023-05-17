@@ -2,9 +2,10 @@
 
 <h2>ENTER A NEW SNEAKER</h2>
 <div class="new-sneaker" style="width: 18rem;">
-<form id="new-form" action="/sneakers" method="POST">
+<form id="new-form" action="/sneakers" method="POST" enctype="multipart/form-data">
+  <input type="file" name="avatar">
   <label>NAME:
-  <input type="text" name="title">
+  <input type="text" name="name" required>
   </label><br>
   <label>BRAND:
     <select name="brand">
@@ -22,6 +23,10 @@
       <input type="number" name="size">
       <input type="submit" value="ADD SNEAKER">
   </label>
+</div>
+<h2>ADD PHOTO</h2>
+<div class="new-sneaker" style="width: 18rem;">
+<img src="https://via.placeholder.com/333x333" alt="Sneaker">
 </div>
 </form>
 

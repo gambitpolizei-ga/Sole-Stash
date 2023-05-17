@@ -15,6 +15,9 @@
   <button type="submit">DELETE SNEAKER</button>
 </form>
 </div>
+
+<img src="/<%=sneaker.image.image.data %>" alt="">
+
 <h2>ADD COMMENT</h2>
 <div class="comment-form" style="width: 18rem;">
 <form id="add-comment-form" method="POST" action="/sneakers/<%= sneaker._id %>/comments">
@@ -69,7 +72,7 @@
     </tbody>
   </table>
 <% } else { %>
-  <h5>No Comments Yet</h5>
+  <h5>NO COMMENTS YET</h5>
 <% } %>
 </div>
     

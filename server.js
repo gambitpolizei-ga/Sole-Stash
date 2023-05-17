@@ -7,6 +7,8 @@ var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
 
+global.__basedir = __dirname;
+
 require('dotenv').config();
 require('./config/database');
 

@@ -1,10 +1,10 @@
-const Brand = require('../models/brand');
-const Sneaker = require('../models/sneaker');
+const Brand = require("../models/brand");
+const Sneaker = require("../models/sneaker");
 
 module.exports = {
   new: newBrand,
   create,
-  addToCast
+  addToCast,
 };
 
 async function addToCast(req, res) {
@@ -15,16 +15,16 @@ async function addToCast(req, res) {
 }
 
 async function newBrand(req, res) {
-  const brands = await Brand.find({}).sort('name');
-  res.render('brands/new', { title: 'Add Brand', brands });
+  const brands = await Brand.find({}).sort("name");
+  res.render("brands/new", { title: "Add Brand", brands });
 }
 
 async function create(req, res) {
-  req.body.born += 'T00:00';
+  req.body.born += "T00:00";
   try {
     await Brand.create(req.body);
   } catch (err) {
     console.log(err);
   }
-  res.redirect('/brands/new');
+  res.redirect("/brands/new");
 }

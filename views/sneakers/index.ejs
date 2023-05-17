@@ -1,27 +1,31 @@
 <%- include('../partials/header') %>
 <body>
-  <img id='title-image' src="/images/-solestash-logo.png" height='500px' width='500px'>
-    <h2>MY COLLECTION</h2>
-    <section id="collection">
-		</section>
-      <table class="collection-table col-3">
-        <thead>
-          <tr>
-            <th>NAME</th>
-            <th>DATE ACQUIRED</th>
-            <th>DETAILS</th>
-          </tr>
-        </thead>
-      <tbody>
-          <% sneakers.forEach(function(s) { %>
-          <tr>
-            <td><%= s.title %></td>
-            <td><%= s.dateAcquired %></td>
-            <td><a href="/sneakers/<%= s._id %>">DETAILS</a></td>
-          </tr>
-          <% }) %>
-      </tbody>
-    </table>
+  <img
+    id="title-image"
+    src="/images/-solestash-logo.png"
+    height="500px"
+    width="500px"
+  />
+  <h2>MY COLLECTION</h2>
+  <section id="collection"></section>
+  <table class="collection-table col-3">
+    <thead>
+      <tr>
+        <th>NAME</th>
+        <th>DATE ACQUIRED</th>
+        <th>DETAILS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% sneakers.forEach(function(s) { %>
+      <tr>
+        <td><%= s.title %></td>
+        <td><%= s.dateAcquired %></td>
+        <td><a href="/sneakers/<%= s._id %>">DETAILS</a></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
 </body>
 
 <%- include('../partials/footer') %>

@@ -1,9 +1,9 @@
 * {
   box-sizing: border-box;
-  font-family: 'Ysabeau', sans-serif;;
+  font-family: 'Ysabeau', sans-serif;
   color: #424748;
   padding: 3px;
-  margin: 9px;
+  margin: 5px;
   font-size: 2.7vmin;
 }
 
@@ -16,8 +16,6 @@ img {
 
 body {
   font-family: 'Ysabeau', sans-serif;
-	color: black;
-  margin: 21px;
   width: 100vw;
   height: 100vh;
   margin-top: 2vmin;
