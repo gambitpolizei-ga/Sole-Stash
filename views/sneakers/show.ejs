@@ -3,7 +3,7 @@
 <div class="sneaker-table" style="width: 18rem;">
 <section id="show-page">
   <div>Name: </div>
-  <div><%= sneaker.title %></div>
+  <div><%= sneaker.name %></div>
   <div>Brand: </div>
   <div><%= sneaker.brand %></div>
   <div>Date Acquired: </div>
@@ -35,9 +35,9 @@
 </div>
 </form>
 <h2>COMMENTS</h2>
-<div class="comment-table" style="width: 61rem;">
+<div style="width: 61rem">
 <% if (sneaker.comments.length) { %>
-<table>
+<table class="comment-table">
     <thead>
       <tr>
         <th>User</th>

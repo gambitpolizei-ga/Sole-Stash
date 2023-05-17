@@ -19,6 +19,7 @@ async function index(req, res) {
 async function show(req, res) {
   const sneaker = await Sneaker.findById(req.params.id).populate("cast");
   const brands = await Brand.find({ _id: { $nin: sneaker.cast } }).sort("name");
+  console.log('sneaker', sneaker);
   res.render("sneakers/show", { title: "Sneaker Details", sneaker, brands });
 }
 
