@@ -12,12 +12,9 @@
   <table class="collection-table">
     <thead>
       <tr>
-        <th>NAME</th>
-        <th>BRAND</th>
-        <th>SIZE</th>
-        <th>DATE ACQUIRED</th>
+        <th>SNEAKERS</th>
         <th>DETAILS</th>
-      </tr>
+      </tr> 
     </thead>
     <tbody>
       <% sneakers.forEach(function(s) { %>
@@ -25,9 +22,6 @@
         <td><h3><%= s.name %></h3>
           <img src="<%= s.image.image.data %>" alt="Sneaker">
         </td>
-        <td><%= s.brand %></td>
-        <td><%= s.size %></td>
-        <td><%= s.dateAcquired %></td>
         <td><a href="/sneakers/<%= s._id %>">DETAILS</a></td>
       </tr>
       <% }) %>

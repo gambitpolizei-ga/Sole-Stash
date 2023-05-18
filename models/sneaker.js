@@ -1,7 +1,8 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require("mongoose"); // Imports Mongoose library module for MongoDB; shortcut to the mongoose.Schema class
+const Schema = mongoose.Schema; // Assigns the schema proptery of the Mongoose object to define data schemas for MongoDB
 
 const commentSchema = new Schema(
+  // This schema describes the structure and data types of the comments object
   {
     content: {
       type: String,
@@ -27,6 +28,7 @@ const commentSchema = new Schema(
 );
 
 const imgSchema = new Schema({
+  // This schema describes the structure and properties of an image required to store the image data
   image: {
     data: String,
     contentType: String,
@@ -34,6 +36,7 @@ const imgSchema = new Schema({
 });
 
 const sneakerSchema = new Schema(
+  // This schema describes the structure and data types of a sneaker object
   {
     comments: [commentSchema],
     image: imgSchema,
@@ -64,3 +67,4 @@ const sneakerSchema = new Schema(
 );
 
 module.exports = mongoose.model("Sneaker", sneakerSchema);
+// Compiles the schema into the sneaker model and exports it to perfrom CRUD operations in the database

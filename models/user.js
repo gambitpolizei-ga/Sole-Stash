@@ -1,7 +1,8 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+const mongoose = require("mongoose"); // Imports Mongoose library module for MongoDB; shortcut to the mongoose.Schema class
+const Schema = mongoose.Schema; // Assigns the schema proptery of the Mongoose object to define data schemas for MongoDB
 
 const userSchema = new Schema(
+  // This schema describes the structure and data types of the user object
   {
     name: String,
     googleId: {
@@ -17,3 +18,4 @@ const userSchema = new Schema(
 );
 
 module.exports = mongoose.model("User", userSchema);
+// Compiles the schema into the user model and exports it to perfrom CRUD operations in the database
