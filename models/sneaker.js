@@ -42,17 +42,17 @@ const sneakerSchema = new Schema(
       type: String,
       enum: ["Air Jordan", "Nike", "Adidas", "Reebok", "Asics", "New Balance", "Converse", "Vans", "Saucony", "Luxury", "Other"],
     },
-    dateAcquired: {
-      type: Date,
-      default: function () {
-        return new Date(new Date().setFullYear(new Date().getFullYear()));
-      },
-    },
     size: {
       type: Number,
       min: 4,
       max: 17,
       default: 10,
+    },
+    dateAcquired: {
+      type: Date,
+      default: function () {
+        return new Date(new Date().setFullYear(new Date().getFullYear()));
+      },
     },
     notes: {
       type: String,

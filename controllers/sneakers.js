@@ -68,11 +68,11 @@ async function update(req, res) {
     res.redirect("/sneakers"); 
   } catch (err) {
     console.log(err);
-    res.render("sneakers/edit", { title: "ADD A NOTE" });
+    res.render("sneakers/edit", { title: "UPDATE SNEAKER" });
   }
 }
 
 async function edit(req, res) {
   const sneaker = await Sneaker.findById(req.params.id);
-  res.render("sneakers/edit", { title: "ADD NOTE", sneaker });
+  res.render("sneakers/edit", { title: "UPDATE", sneaker });
 }

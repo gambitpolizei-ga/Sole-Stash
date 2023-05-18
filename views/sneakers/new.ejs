@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h2>ENTER A NEW SNEAKER</h2>
-<div class="new-sneaker" style="width: 18rem;">
+<div class="new-sneaker" style="width: 18rem">
 <form id="new-form" action="/sneakers" method="POST" enctype="multipart/form-data">
   <label>NAME:
   <input type="text" name="name" required>
@@ -21,21 +21,21 @@
       <option value="Other">Other</option>
     </select>
   </label><br>
+  <label>SIZE:
+    <input type="number" name="size">
+  </label><br>
   <label>DATE ACQUIRED:
     <input type="datetime-local">
   </label><br>
-  <label>SIZE:
-      <input type="number" name="size">
-  </label><br>
-  <label>NOTES:
-    <textarea name="content"></textarea>
+  <label>NOTES: <br>
+    <textarea name="notes"></textarea>
   </label><br>
     <input type="submit" value="ADD SNEAKER">
 </div>
 <h2>ADD PHOTO</h2>
-<div class="new-sneaker" style="width: 18rem;">
+<div class="new-sneaker" style="width: 18rem">
 <img src="https://via.placeholder.com/333x333" alt="Sneaker">
-<input type="file" name="avatar">
+<input type="file" name="avatar" required>
 </div>
 </form>
 

@@ -275,38 +275,44 @@ h3 {
   border-width: 11px;
   border-style: outset;
   box-sizing: border-box;
-  border-color: white;
-  filter: drop-shadow(2px 2px 1px black);
+  border-color: rgb(236, 241, 241);
+  justify-content: space-between;
+  width: 100%;
 }
 
 .comment-form {
   border-width: 11px;
   border-style: outset;
   box-sizing: border-box;
+  border-color: rgb(236, 241, 241);
 }
 
 .comment-table {
   border-width: 11px;
   border-style: outset;
   box-sizing: border-box;
+  border-color: rgb(236, 241, 241);
   justify-content: space-between;
-  width: 100%;
+  width: 114%;
 }
 
 .sneaker-table {
   border-width: 11px;
   border-style: outset;
   box-sizing: border-box;
+  border-color: rgb(236, 241, 241);
 }
 
 .new-sneaker {
   border-width: 11px;
   border-style: outset;
   box-sizing: border-box;
+  border-color: rgb(236, 241, 241);
 }
 
 .update-form {
   border-width: 11px;
   border-style: outset;
   box-sizing: border-box;
+  border-color: rgb(236, 241, 241);
 }

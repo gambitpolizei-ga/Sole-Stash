@@ -6,10 +6,10 @@
   <div><%= sneaker.name %></div>
   <div>Brand: </div>
   <div><%= sneaker.brand %></div>
-  <div>Date Acquired: </div>
-  <div><%= sneaker.dateAcquired %></div>
   <div>Size: </div>
   <div><%= sneaker.size %></div>
+  <div>Date Acquired: </div>
+  <div><%= sneaker.dateAcquired %></div>
   <div>Notes: </div>
   <div><%= sneaker.notes %></div>
 </section>
@@ -23,7 +23,7 @@
 <h2>ADD COMMENT</h2>
 <div class="comment-form" style="width: 18rem;">
 <form id="add-comment-form" method="POST" action="/sneakers/<%= sneaker._id %>/comments">
-  <label>Comment:</label>
+  <label>Comment:<br></label>
   <textarea name="content"></textarea>
   <label>Rating:</label>
   <select name="rating">
@@ -91,22 +91,17 @@
           <% }); %>
         </select>
     </label><br>
+    <label>SIZE:
+      <input type="number" name="size" value="<%= sneaker.size %>">
+    </label><br>
     <label>DATE ACQUIRED:
         <input type="datetime-local" name="dateAcquired" value="<%= sneaker.dateAcquired %>">
     </label><br>
-    <label>SIZE:
-        <input type="number" name="size" value="<%= sneaker.size %>">
-    </label><br>
-    <label>NOTES:
-        <textarea name="content"></textarea>
+    <label>NOTES:<br>
+        <textarea name="notes"></textarea>
     </label><br>
     <button type="submit">UPDATE SNEAKER</button>
 </div>
-<h2>ADD PHOTO</h2>
-      <div class="new-sneaker" style="width: 18rem;">
-      <img src="https://via.placeholder.com/333x333" alt="Sneaker">
-      <input type="file" name="avatar">
-      </div>
 </form>
     
 <%- include('../partials/footer') %>
