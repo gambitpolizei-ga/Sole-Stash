@@ -51,7 +51,7 @@ app.use(passport.session());
 // Middleware adds support for login sessions using Passport
 
 app.use(function (req, res, next) {
-  // Middleware makes authenticated user object available in the view templates
+  // Middleware makes authenticated user object available in the view templates, placed below Passport middleware
   res.locals.user = req.user;
   next();
 });
@@ -64,12 +64,16 @@ app.use('/', commentsRouter);
 // Uses commentsRouter middleware to handle requests to the root URL
 
 app.use(function(req, res, next) {
+  // Catch 404 and forward to error handler
   next(createError(404));
 });
 
 app.use(function(err, req, res, next) {
+  // Error handler
   res.locals.message = err.message;
+  // Set locals, only providing error in development
   res.locals.error = req.app.get('env') === 'development' ? err : {};
+  // Render the error page
   res.status(err.status || 500);
   res.render('error');
 });
