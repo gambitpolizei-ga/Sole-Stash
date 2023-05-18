@@ -3,8 +3,8 @@
   font-family: 'Ysabeau', sans-serif;
   color: #424748;
   padding: 3px;
-  margin: 5px;
   font-size: 2.7vmin;
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 1); 
 }
 
 img {
@@ -18,7 +18,6 @@ body {
   font-family: 'Ysabeau', sans-serif;
   width: 100vw;
   height: 100vh;
-  margin-top: 2vmin;
   display: grid;
   background-image: url("/images/sole-stash-bg.jpg");
   background-repeat: no-repeat;
@@ -74,7 +73,11 @@ nav > a {
 
 nav > a:hover:not(.active) {
   color: rgb(226, 78, 169);
-  background-color: #424748;
+  background-image: linear-gradient(to right, rgb(236, 241, 241), rgb(51, 215, 191) 50%, rgb(40, 88, 174) 100%);
+  transition: background-color 100ms ease-in;
+  box-shadow: black 2px 2px 6px 2px;
+  border: 0.1vmin solid lightgrey;
+  border-radius: 0.3vmin;
 }
 
 nav > a.active {
@@ -108,7 +111,7 @@ table {
 
 table thead th {
   padding: 5px;
-  border-bottom: 2px solid #424748;
+  border-bottom: 2px solid
 }
 
 table td {
@@ -197,11 +200,11 @@ hr {
 }
 
 .login img {
-  height: 40px;
+  height: 33px;
+  filter: drop-shadow(2px 2px 1px black);
 }
 
 .comment-user {
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -236,6 +239,7 @@ main {
 h2 {
 	font-size: 36px;
 	font-weight: bold;
+  margin: 0%;
 }
 
 p {
@@ -271,6 +275,8 @@ h3 {
   border-width: 11px;
   border-style: outset;
   box-sizing: border-box;
+  border-color: white;
+  filter: drop-shadow(2px 2px 1px black);
 }
 
 .comment-form {
@@ -294,6 +300,12 @@ h3 {
 }
 
 .new-sneaker {
+  border-width: 11px;
+  border-style: outset;
+  box-sizing: border-box;
+}
+
+.update-form {
   border-width: 11px;
   border-style: outset;
   box-sizing: border-box;

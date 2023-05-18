@@ -1,5 +1,4 @@
 const Sneaker = require("../models/sneaker");
-const Brand = require("../models/brand");
 const fs = require("fs");
 const path = require("path");
 
@@ -9,6 +8,8 @@ module.exports = {
   new: newSneaker,
   create,
   delete: deleteSneaker,
+  edit,
+  update
 };
 
 async function index(req, res) {
@@ -17,10 +18,9 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-  const sneaker = await Sneaker.findById(req.params.id).populate("cast");
-  const brands = await Brand.find({ _id: { $nin: sneaker.cast } }).sort("name");
-  console.log('sneaker', sneaker);
-  res.render("sneakers/show", { title: "Sneaker Details", sneaker, brands });
+  const sneaker = await Sneaker.findById(req.params.id);
+  console.log("sneaker", sneaker);
+  res.render("sneakers/show", { title: "Sneaker Details", sneaker });
 }
 
 function newSneaker(req, res) {
@@ -28,6 +28,7 @@ function newSneaker(req, res) {
 }
 
 async function create(req, res) {
+  console.log(req.body)
   if (!isImg(req.file.mimetype)) {
     console.log("You must upload a jpeg or png");
     fs.unlinkSync(__basedir + `/public/uploads/${req.file.filename}`);
@@ -59,4 +60,19 @@ async function deleteSneaker(req, res) {
 function isImg(mimetype) {
   const validImgTypes = ["image/jpeg", "image/png"];
   return validImgTypes.includes(mimetype);
+}
+
+async function update(req, res) {
+  try {
+    await Sneaker.findOneAndUpdate({_id: req.params.id}, req.body, {new: true});
+    res.redirect("/sneakers"); 
+  } catch (err) {
+    console.log(err);
+    res.render("sneakers/edit", { title: "ADD A NOTE" });
+  }
+}
+
+async function edit(req, res) {
+  const sneaker = await Sneaker.findById(req.params.id);
+  res.render("sneakers/edit", { title: "ADD NOTE", sneaker });
 }

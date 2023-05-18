@@ -40,7 +40,7 @@ const sneakerSchema = new Schema(
     name: { type: String, required: true },
     brand: {
       type: String,
-      enum: ["Air Jordan", "Nike", "Adidas", "Luxury", "Other"],
+      enum: ["Air Jordan", "Nike", "Adidas", "Reebok", "Asics", "New Balance", "Converse", "Vans", "Saucony", "Luxury", "Other"],
     },
     dateAcquired: {
       type: Date,
@@ -54,12 +54,9 @@ const sneakerSchema = new Schema(
       max: 17,
       default: 10,
     },
-    cast: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Brand",
-      },
-    ],
+    notes: {
+      type: String,
+    }
   },
   {
     timestamps: true,
