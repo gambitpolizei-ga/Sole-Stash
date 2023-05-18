@@ -19,7 +19,7 @@
 </form>
 </div>
 
-<img src="/<%=sneaker.image.image.data %>" alt="">
+<img src="/<%=sneaker.image.image.data %>" alt="Sneaker">
 
 <h2>ADD COMMENT</h2>
 <div class="comment-form" style="width: 18rem;">
@@ -69,7 +69,6 @@
         </tr>
       <% }) %>
       <tr>
-        <td colspan="3"></td>
         <td><strong><%= (total / sneaker.comments.length).toFixed(1) %></strong></td>
       </tr>
     </tbody>
