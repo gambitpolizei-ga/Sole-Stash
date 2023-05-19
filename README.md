@@ -8,7 +8,7 @@ This web application was created with the intention of giving users a minimal in
 ![](https://github.com/gambitpolizei-ga/sole-stash/blob/main/public/images/screenshot-homepage.png)
 
 ## Add Sneaker Page
-![](https://github.com/gambitpolizei-ga/sole-stash/blob/main/public/images/screenshot-add-sneaker.png)
+![](https://github.com/gambitpolizei-ga/sole-stash/blob/main/public/images/screenshot-add-sneaker-one.png)
 
 ## Details Page
 ![](https://github.com/gambitpolizei-ga/sole-stash/blob/main/public/images/screenshot-details-one.png)
