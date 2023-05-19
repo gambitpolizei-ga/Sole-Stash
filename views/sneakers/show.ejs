@@ -15,7 +15,7 @@
   <div><%= sneaker.notes %></div>
 </section>
 <form id="new-form" action='/sneakers/<%= sneaker._id %>?_method=DELETE' method="POST">
-  <button type="submit">DELETE SNEAKER</button>
+  <button type="submit">DELETE SNEAKERS</button>
 </form>
 </div>
 
@@ -80,7 +80,7 @@
 <% } %>
 </div>
 
-<h2>UPDATE SNEAKER</h2>
+<h2>UPDATE SNEAKERS</h2>
 <div class="update-form" style="width: 18rem;">
 <form id="edit-sneaker" action="/sneakers/<%= sneaker.id %>?_method=PUT" method="POST">
     <label>NAME:
@@ -102,7 +102,7 @@
     <label>NOTES:<br>
         <textarea name="notes"></textarea>
     </label><br>
-    <button type="submit">UPDATE SNEAKER</button>
+    <button type="submit">UPDATE SNEAKERS</button>
 </div>
 </form>
     
