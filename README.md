@@ -38,6 +38,6 @@ Some of the enchancements I would like to add to Sole Stash are as follows:
 * Permit users to buy, sell, and trade on the app
 * Give users the option to bookmark sneakers
 * Create a wishlist where users can add sneakers they want to have in their collection
-* Grant access to metrics regarding sneakers across the app, such as the frequency of a certain sneaker in user's collections
+* Grant access to metrics regarding sneakers across the app, such as the frequency of a certain sneaker in users' collections
 * Add a followers function where other users can follow and interact with other users
 * Optimize app design for mobile use
