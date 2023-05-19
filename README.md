@@ -26,7 +26,7 @@ This web application was created with the intention of giving users a minimal in
 * Heroku
 
 ## Getting Started
-Sole Stash is a sneaker collection tracker where a user can add sneakers they have acquired into a table that lists them. Users can add sneakers using the ADD SNEAKERS tab which redirects them to a page to provide relevant information including the name, brand, size, date acquired, notes, and a picture, which is required. After clicking the ADD SNEAKERS button, the sneakers then appear on the redirected COLLECTION home page with the corresponding details. In the DETAILS page, the user can update or delete the sneaker and add comments, upon which the user will be redirected back to the COLLECTION page with the changes made. 
+Sole Stash is a sneaker collection tracker where logged-in users can add their sneakers into a table that lists them. Users can add sneakers using the ADD SNEAKERS tab which redirects them to a page to provide relevant information including the name, brand, size, date acquired, notes, and a picture, which is required. After clicking the ADD SNEAKERS button, the sneakers then appear on the redirected COLLECTION home page with the corresponding details. In the DETAILS tab, users can update or delete the sneaker and add comments, which when added will redirect back to the COLLECTION page with the changes made. 
 
 https://sole-stash.herokuapp.com
 
