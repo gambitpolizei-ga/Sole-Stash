@@ -2,7 +2,7 @@
 Developed by TJ Roncal on May 19, 2023
 
 ## Description
-Sole Stash was created with the intention of offering users an intuitive interface where they can add or delete sneakers they have in a collection table. The web application was given a minimal retro aesthetic to provide a feeling of nostalgia, comfort, and belonging. With a focus on user experience, the straightforward functionality allows for simple user adjustments made to appear seamlessly and be accessible.   
+Sole Stash was created with the intention of offering users an intuitive interface where they can add or delete sneakers they have in a collection table. The web application was given a minimal retro aesthetic to provide a feeling of nostalgia, comfort, and belonging. With a focus on user experience, the straightforward functionality allows for simple user adjustments to appear seamlessly and be made accessible.   
 
 ## COLLECTION Home Page
 ![](https://github.com/gambitpolizei-ga/sole-stash/blob/main/public/images/screenshot-homepage.png)
