@@ -26,17 +26,18 @@ This web application was created with the intention of giving users a minimal in
 * Heroku
 
 ## Getting Started
-Sole Stash is a sneaker collection tracker where a user can add sneakers they have acquired into a table that lists them. Users can add sneakers using the Add Sneaker tab which redirects them to a page to provide relevant information including the name, brand, size, date acquired, notes and a picture, which is required. After clicking the Add Sneaker button, the sneaker then appears on the redirected collection page, which corresponding details. In the details page, the user can update or delete the sneaker and add comments; and be redirected back to the collection page with the changes made. 
+Sole Stash is a sneaker collection tracker where a user can add sneakers they have acquired into a table that lists them. Users can add sneakers using the Add Sneaker tab which redirects them to a page to provide relevant information including the name, brand, size, date acquired, notes, and a picture, which is required. After clicking the Add Sneaker button, the sneakers then appear on the redirected collection page with the corresponding details. In the details page, the user can update or delete the sneaker and add comments, and then will be redirected back to the collection page with the changes made. 
 
 [https://sole-stash.herokuapp.com]
 
 ## Ice Box Features
-Some of the enchancements I would like to add to the web app are as follows:
-* Allow users to update the image they have for their sneaker or add more than one image
+Some of the enchancements I would like to add to Sole Stash are as follows:
+* Allow users to update the image they have for their sneaker and add more than one image
 * Add a library where users can look up different sneakers
 * Provide links where users can purchase a sneaker that they want
-* Permit users to buy, sell and trade on the app
+* Permit users to buy, sell, and trade on the app
 * Give users the option to bookmark sneakers
 * Create a wishlist where users can add sneakers they want to have in their collection
+* Grant access to metrics regarding sneakers across the app, such as the frequency of a certain sneaker in user's collections
 * Add a followers function where other users can follow and interact with other users
-* Optimize design for mobile use
+* Optimize app design for mobile use
