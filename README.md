@@ -34,7 +34,7 @@ https://sole-stash.herokuapp.com
 ## Ice Box Features
 Some of the enchancements I would like to add to Sole Stash are as follows:
 * Allow users to update the image they have for their sneaker and add more than one image
-* Add a library where users can look up different sneakers
+* Add search functionality with a library where users can look up different sneakers
 * Provide links where users can purchase a sneaker that they want
 * Permit users to buy, sell, and trade on the app
 * Give users the option to bookmark sneakers
