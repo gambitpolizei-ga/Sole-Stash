@@ -2,7 +2,7 @@
 Developed by TJ Roncal on May 19, 2023
 
 ## Description
-This web application was created with the intention of giving users a minimal interface where they can add or delete sneakers they have in a collection table. The page was given a retro aesthetic to create a feeling of nostalgia and comfort. With a focus on user experience, the straightforward functionality of the application allows for user adjustments to appear seamless and accessible.   
+This web application was created with the intention of giving users a minimal interface where they can add or delete sneakers they have in a collection table. The page was given a retro aesthetic to provide a feeling of nostalgia and comfort. With a focus on user experience, the straightforward functionality of the application allows for user adjustments to appear seamless and accessible.   
 
 ## COLLECTION Home Page
 ![](https://github.com/gambitpolizei-ga/sole-stash/blob/main/public/images/screenshot-homepage.png)
