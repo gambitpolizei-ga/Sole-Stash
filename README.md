@@ -22,6 +22,7 @@ Sole Stash was created with the intention of offering users an intuitive interfa
 * Node.js
 * Mongoose
 * MongoDB
+* Multer
 * GitHub
 * Heroku
 
