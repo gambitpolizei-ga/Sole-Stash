@@ -8,24 +8,19 @@
     width="500px"
   />
   <div id="collection">
-  <table class="collection-table">
-    <thead>
-      <tr>
-        <th>SNEAKERS</th>
-        <th>DETAILS</th>
-      </tr> 
-    </thead>
-    <tbody>
-      <% sneakers.forEach(function(s) { %>
-      <tr>
-        <td><h3><%= s.name %></h3>
-          <img src="<%= s.image.image.data %>" alt="Sneaker">
-        </td>
-        <td><a href="/sneakers/<%= s._id %>">DETAILS</a></td>
-      </tr>
-      <% }) %>
-    </tbody>
-  </table>
+    <table class="collection-table">
+      <tbody>
+        <% sneakers.forEach(function(s) { %>
+        <tr>
+          <td>
+            <img src="<%= s.image.image.data %>" alt="Sneaker" />
+            <h3><%= s.name %></h3>
+            <a href="/sneakers/<%= s._id %>">DETAILS</a>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
   </div>
 </body>
 
