@@ -19,7 +19,9 @@
 </form>
 </div>
 
+<div id="sneaker-image">
 <img src="/<%=sneaker.image.image.data %>" alt="Sneaker">
+</div>
 
 <h2>ADD COMMENT</h2>
 <div class="comment-form" style="width: 18rem;">
@@ -38,7 +40,7 @@
 </div>
 </form>
 <h2>COMMENTS</h2>
-<div style="width: 61rem">
+<div style="width: 100rem">
 <% if (sneaker.comments.length) { %>
 <table class="comment-table">
     <thead>

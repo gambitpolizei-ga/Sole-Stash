@@ -11,7 +11,7 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 100%;
 }
 
 body {
@@ -277,7 +277,8 @@ h3 {
   box-sizing: border-box;
   border-color: rgb(236, 241, 241);
   justify-content: space-between;
-  width: 100%;
+  width: 50%;
+  display: center;
 }
 
 .comment-form {
@@ -315,4 +316,20 @@ h3 {
   border-style: outset;
   box-sizing: border-box;
   border-color: rgb(236, 241, 241);
+}
+
+#title-image {
+  width: 50%;
+  display: flex;
+}
+
+#collection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#sneaker-image {
+  width: 460px;
 }
